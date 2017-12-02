@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B2CAEEB0-F663-40F4-B077-98F9461A2F4A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FuppBackend</RootNamespace>
-    <AssemblyName>FuppBackend</AssemblyName>
+    <RootNamespace>Agent</RootNamespace>
+    <AssemblyName>Agent</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
