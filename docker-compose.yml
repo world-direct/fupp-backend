@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  webapi:
+    image: webapi
+    build:
+      context: .\WebApi
+      dockerfile: Dockerfile
+
+  testagent:
+    image: testagent
+    build:
+      context: .\TestAgent
+      dockerfile: Dockerfile
+
+  testcoordinator:
+    image: testcoordinator
+    build:
+      context: .\TestCoordinator
+      dockerfile: Dockerfile
+
+  testreporter:
+    image: testreporter
+    build:
+      context: .\TestReporter
+      dockerfile: Dockerfile

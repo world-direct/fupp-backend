@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FuppBackend")]
+[assembly: AssemblyTitle("TestCoordinator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FuppBackend")]
+[assembly: AssemblyProduct("TestCoordinator")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b2caeeb0-f663-40f4-b077-98f9461a2f4a")]
+[assembly: Guid("d1dcf8a9-3513-47e3-b393-19376f213435")]
 
 // Version information for an assembly consists of the following four values:
 //
