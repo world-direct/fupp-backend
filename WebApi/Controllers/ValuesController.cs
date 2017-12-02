@@ -3,35 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using Akka.Actor;
+using WebApi.TestActors.Messages;
 
 namespace WebApi.Controllers {
     public class ValuesController : ApiController {
+
+        private ActorSelection ActorRef { get; }
+
+        public ValuesController() {
+             ActorRef = WebApiApplication.ActorSystem.ActorSelection("user/TestActor");
+        }
+
         // GET api/values
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
+        public async Task<int> Get() {
+            var result = await ActorRef.Ask<ResultCalculated>(new AddCommand(8, 2));
+            return  result.Result;
         }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
+       
     }
 }
