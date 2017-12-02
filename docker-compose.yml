@@ -30,3 +30,7 @@ services:
     build:
       context: .\TestReporter
       dockerfile: Dockerfile
+
+  console:
+    image: microsoft/dotnet-framework:4.7
+    command: powershell ping localhost -t
