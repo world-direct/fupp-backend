@@ -1,4 +1,5 @@
 ﻿namespace TestCoordinator {
+    using System;
     using Common.Utility;
 
     public class Program {
