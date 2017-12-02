@@ -11,9 +11,8 @@ namespace Common
 
         public class Topics
         {
-            public static readonly string AGENT_FINISHED = "AGENT_FINISHED";
-            public static readonly string TEST_RESULT_ANALYSED = "TEST_RESULT_ANALYSED";
-            public static readonly string TEST_STARTED = "TEST_STARTED";
+            public static readonly string AGENT_TOPIC = "AGENT_TOPIC";
+            public static readonly string TEST_TOPIC = "TEST_TOPIC";
         }
 
     }

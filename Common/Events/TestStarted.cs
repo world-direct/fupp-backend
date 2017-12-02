@@ -8,5 +8,10 @@ namespace Common.Events
 {
     public class TestStarted
     {
+        public TestStarted(string testName) {
+            TestName = testName;
+        }
+
+        public string TestName { get; }
     }
 }
