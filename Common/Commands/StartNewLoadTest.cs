@@ -9,6 +9,9 @@ namespace Common.Commands
     public class StartNewLoadTest
     {
         public string Url { get; set; }
+        
+        public int NumberOfAgents { get; set; }
+        public int RequestsPerAgentCount { get; set; }
 
     }
 }

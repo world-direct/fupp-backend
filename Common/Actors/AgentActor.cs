@@ -15,6 +15,7 @@
         private readonly Guid id;
 
         public AgentActor(Guid testRunId, int requestsPerAgentCount) {
+            Console.WriteLine("AgentActor created");
             this.testRunId = testRunId;
             this.requestsPerAgentCount = requestsPerAgentCount;
             id = Guid.NewGuid();

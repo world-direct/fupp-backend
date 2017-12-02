@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace Common.Actors
 {
-    public class SenderActor : ReceiveActor
+    public class Agent : ReceiveActor
     {
+        public Agent()
+        {
+            Console.WriteLine("Agent created");
+        }
     }
 }
