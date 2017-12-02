@@ -31,7 +31,7 @@ namespace Common.Actors
         }
 
         private void HandleProcessAgentResults(ProcessAgentResults processAgentResults) {
-            _publishMediator.Tell(new Publish("agentFinished", new AgentFinished(_finishedRequests.ToList())));
+            _publishMediator.Tell(new Publish(Constants.Topics.AGENT_TOPIC, new AgentFinished(_finishedRequests.ToList())));
         }
     }
 }
