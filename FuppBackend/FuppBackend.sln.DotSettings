@@ -1,0 +1,41 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=05E2CC903F55A5438BFF445191E22159/AbsolutePath/@EntryValue">I:\Resharper\Settings\CodeFormatSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=05E2CC903F55A5438BFF445191E22159/@KeyIndexDefined">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=2D59CE7295D9EF41B9200D34BCFCA4ED/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=2D59CE7295D9EF41B9200D34BCFCA4ED/AbsolutePath/@EntryValue">I:\Resharper\Settings\InspectionSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=371CCBF620A9E344B8BC085EC3FFA7E2/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=371CCBF620A9E344B8BC085EC3FFA7E2/AbsolutePath/@EntryValue">I:\Resharper\Settings\SharedEditingSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=510AE8718F530F409E1EB705DA13F3A6/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=510AE8718F530F409E1EB705DA13F3A6/AbsolutePath/@EntryValue">I:\Resharper\Settings\CSharpSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=52EFA30C9F78134B8F88A8069D10E787/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=52EFA30C9F78134B8F88A8069D10E787/AbsolutePath/@EntryValue">I:\Resharper\Settings\HtmlSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=5307B7775C225C4ABDE448057A3F82DB/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=5307B7775C225C4ABDE448057A3F82DB/AbsolutePath/@EntryValue">I:\Resharper\Settings\Exceptional.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=822A2CD9ECE704418948958B7BEA61EE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=822A2CD9ECE704418948958B7BEA61EE/AbsolutePath/@EntryValue">I:\Resharper\Settings\TypescriptSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=8440AA6608900841A6380BAD874EEE22/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=8440AA6608900841A6380BAD874EEE22/AbsolutePath/@EntryValue">I:\Resharper\Settings\XmlSettings.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=C718148F3E1F6743920694B9441498F3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=C718148F3E1F6743920694B9441498F3/AbsolutePath/@EntryValue">I:\Resharper\Settings\CodeTemplates.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File05E2CC903F55A5438BFF445191E22159/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File05E2CC903F55A5438BFF445191E22159/RelativePriority/@EntryValue">1</s:Double>
+	
+	
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File2D59CE7295D9EF41B9200D34BCFCA4ED/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File2D59CE7295D9EF41B9200D34BCFCA4ED/RelativePriority/@EntryValue">6</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File371CCBF620A9E344B8BC085EC3FFA7E2/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File371CCBF620A9E344B8BC085EC3FFA7E2/RelativePriority/@EntryValue">8</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File510AE8718F530F409E1EB705DA13F3A6/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File510AE8718F530F409E1EB705DA13F3A6/RelativePriority/@EntryValue">3</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File52EFA30C9F78134B8F88A8069D10E787/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File52EFA30C9F78134B8F88A8069D10E787/RelativePriority/@EntryValue">5</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File5307B7775C225C4ABDE448057A3F82DB/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File5307B7775C225C4ABDE448057A3F82DB/RelativePriority/@EntryValue">4</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File822A2CD9ECE704418948958B7BEA61EE/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File822A2CD9ECE704418948958B7BEA61EE/RelativePriority/@EntryValue">9</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File8440AA6608900841A6380BAD874EEE22/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File8440AA6608900841A6380BAD874EEE22/RelativePriority/@EntryValue">10</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileC718148F3E1F6743920694B9441498F3/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileC718148F3E1F6743920694B9441498F3/RelativePriority/@EntryValue">2</s:Double></wpf:ResourceDictionary>
