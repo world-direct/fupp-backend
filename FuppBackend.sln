@@ -15,6 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{9A627480-5F2A-4E82-A625-078013A14628}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lighthouse", "Lighthouse\Lighthouse.csproj", "{2D20FC73-9215-4CB9-B131-19B28F6CE966}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{D70163D1-C153-4991-8AAD-A1EC5E5F194D}"
+	ProjectSection(SolutionItems) = preProject
+		HowToRun.txt = HowToRun.txt
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{89888A09-4F78-42B6-90DD-1EF76530F94E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resharper", "Resharper", "{47DA7531-EC32-4BB7-886D-B5A7E0A54840}"
@@ -45,6 +52,10 @@ Global
 		{A21C57CF-AF6A-4EA6-9A17-7D6007346D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A21C57CF-AF6A-4EA6-9A17-7D6007346D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A21C57CF-AF6A-4EA6-9A17-7D6007346D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D20FC73-9215-4CB9-B131-19B28F6CE966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D20FC73-9215-4CB9-B131-19B28F6CE966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D20FC73-9215-4CB9-B131-19B28F6CE966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D20FC73-9215-4CB9-B131-19B28F6CE966}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A627480-5F2A-4E82-A625-078013A14628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A627480-5F2A-4E82-A625-078013A14628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A627480-5F2A-4E82-A625-078013A14628}.Release|Any CPU.ActiveCfg = Release|Any CPU

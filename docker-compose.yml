@@ -7,6 +7,12 @@ services:
       context: .\WebApi
       dockerfile: Dockerfile
 
+  lighthouse:
+    image: lighthouse
+    build:
+      context: .\Lighthouse
+      dockerfile: Dockerfile
+
   testagent:
     image: testagent
     build:
