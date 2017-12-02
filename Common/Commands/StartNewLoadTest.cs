@@ -8,7 +8,7 @@ namespace Common.Commands
 {
     public class StartNewLoadTest
     {
-
+        public string Url { get; set; }
 
     }
 }

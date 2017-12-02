@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Commands
 {
-    class ProcessAgentResults
+   public sealed class ProcessAgentResults
     {
     }
 }

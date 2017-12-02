@@ -1,4 +1,5 @@
 ﻿using Akka.Actor;
+using Common.Actors;
 using Common.Commands;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace TestAgent.Actors
 {
     public class TestRunCoordinator : ReceiveActor
     {
-        
+
 
         public TestRunCoordinator()
         {
@@ -20,7 +21,7 @@ namespace TestAgent.Actors
 
         private void StartNewLoadTest(StartNewLoadTest message)
         {
-            
+            Context.ActorOf(Props.Create<TestRun>());
         }
 
     }
