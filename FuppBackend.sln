@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lighthouse", "Lighthouse\Li
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{D70163D1-C153-4991-8AAD-A1EC5E5F194D}"
 	ProjectSection(SolutionItems) = preProject
-		HowoRun.txt = HowoRun.txt
+		HowToRun.txt = HowToRun.txt
 	EndProjectSection
 EndProject
 Global

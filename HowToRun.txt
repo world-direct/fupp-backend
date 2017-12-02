@@ -1,8 +1,8 @@
-# Build Containers
+# Build Containers:
 
 docker-compose build
 
-# Start Services
+# Start Services:
 
 docker-compose up
 
