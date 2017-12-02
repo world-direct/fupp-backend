@@ -1,6 +1,7 @@
 ﻿namespace Common.Actors {
     using System;
     using Akka.Actor;
+    using Akka.Cluster.Routing;
     using Akka.Configuration;
     using Akka.Routing;
     using Events;
@@ -18,8 +19,10 @@
             this.requestsPerAgentCount = requestsPerAgentCount;
             id = Guid.NewGuid();
 
-            Config config = new Cluster
-            Context.ActorOf(Props.Create<SenderActor>().WithRouter(new BroadcastPool(requestsPerAgentCount,)), SENDER_ROUTER_NAME);
+            Pool pool = new BroadcastPool(requestsPerAgentCount);
+            ClusterRouterPoolSettings settings = new ClusterRouterPoolSettings(requestsPerAgentCount, requestsPerAgentCount, false,"Agent");
+            RouterConfig clusterRouterConfig = new ClusterRouterPool(pool, settings);
+            Context.ActorOf(Props.Create<SenderActor>().WithRouter(clusterRouterConfig), SENDER_ROUTER_NAME);
 
             Receive<RequestFinished>(m => HandleRequestFinished(m));
         }
@@ -27,6 +30,5 @@
         private void HandleRequestFinished(RequestFinished m) {
             
         }
-
     }
 }

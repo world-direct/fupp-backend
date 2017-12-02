@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Common.Actors {
+    using Akka.Actor;
 
-namespace Common.Actors
-{
-    public class Sender
-    {
+    public sealed class SenderActor : ReceiveActor {
+        
     }
 }
