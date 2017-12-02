@@ -1,5 +1,5 @@
 FROM microsoft/dotnet-framework:4.7
 ARG source
 WORKDIR /app
-COPY ${source:-obj/Docker/publish} .
-ENTRYPOINT ["C:\app\TestAgent.exe"]
+COPY ${source:-bin/Debug} .
+ENTRYPOINT ["C:\\app\\TestAgent.exe"]
