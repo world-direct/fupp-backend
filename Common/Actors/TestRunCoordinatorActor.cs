@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace TestAgent.Actors
 {
-    public class TestRunCoordinator : ReceiveActor
+    public sealed class TestRunCoordinator : ReceiveActor
     {
-
 
         public TestRunCoordinator()
         {
@@ -21,7 +20,8 @@ namespace TestAgent.Actors
 
         private void StartNewLoadTest(StartNewLoadTest message)
         {
-            Context.ActorOf(Props.Create<TestRun>());
+           var testRunActor = Context.ActorOf(Props.Create(() => new TestRunActor(message)));
+            testRunActor.Forward(message);
         }
 
     }

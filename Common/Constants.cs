@@ -15,5 +15,10 @@ namespace Common
             public static readonly string TEST_TOPIC = "TEST_TOPIC";
         }
 
+        public class Roles
+        {
+            public static readonly string AGENT = "agent";
+        }
+
     }
 }

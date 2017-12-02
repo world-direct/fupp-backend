@@ -7,9 +7,17 @@
 
         private static void Main(string[] args) {
             Console.WriteLine("Test AgentActor");
-
-            using (ActorSystem system = ActorSystemProvider.ActorSystem) {
-                // system.ActorOf(Props.Create<TestRunCoordinator>(), "testRunCoordinator");
+            using (var system = ActorSystemProvider.ActorSystem)
+            {
+                //TODO remove (only for testing)
+                var testRunCoordinator = system.ActorOf(Props.Create<TestRunCoordinator>(), "testRunCoordinator");
+                testRunCoordinator.Tell(new StartNewLoadTest()
+                {
+                    NumberOfAgents = 2,
+                    Url = "https://www.google.at",
+                    RequestsPerAgentCount = 2
+                }
+                );
 
                 Console.ReadLine();
                 system.Terminate();

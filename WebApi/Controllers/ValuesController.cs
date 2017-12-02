@@ -9,12 +9,14 @@ using Akka.Actor;
 using WebApi.TestActors.Messages;
 
 namespace WebApi.Controllers {
+    using Common.Utility;
+
     public class ValuesController : ApiController {
 
         private ActorSelection ActorRef { get; }
 
         public ValuesController() {
-             ActorRef = WebApiApplication.ActorSystem.ActorSelection("user/TestActor");
+             ActorRef = ActorSystemProvider.ActorSystem.ActorSelection("user/TestActor");
         }
 
         // GET api/values

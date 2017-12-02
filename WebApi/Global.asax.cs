@@ -10,9 +10,10 @@ using Akka.Actor;
 using WebApi.TestActors;
 
 namespace WebApi {
+    using Common.Utility;
+
     public class WebApiApplication : System.Web.HttpApplication {
 
-        public static ActorSystem ActorSystem { get; private set; }
 
 
         protected void Application_Start()
@@ -24,14 +25,14 @@ namespace WebApi {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             
-            ActorSystem = ActorSystem.Create("fupp");
-            var d = ActorSystem.ActorOf(Props.Create<MyTestActor>(), "TestActor");
+           var actorSystem = ActorSystemProvider.ActorSystem;
+            actorSystem.ActorOf(Props.Create<MyTestActor>(), "TestActor");
 
         }
 
         protected void Application_End()
         {
-            CoordinatedShutdown.Get(ActorSystem).Run().Wait(TimeSpan.FromSeconds(5));
+            CoordinatedShutdown.Get(ActorSystemProvider.ActorSystem).Run().Wait(TimeSpan.FromSeconds(5));
         }
     }
 }
