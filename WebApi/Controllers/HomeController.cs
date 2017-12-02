@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace WebApi.Controllers {
     public class HomeController : Controller {
         public String Index() {
-            return "juhu";
+            return "Our Hackathon FUPP Application";
         }
     }
 }
