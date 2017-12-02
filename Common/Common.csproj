@@ -33,8 +33,8 @@
     <Reference Include="Akka, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Akka.1.3.2\lib\net45\Akka.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -50,9 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actors\Agent.cs" />
+    <Compile Include="Actors\AgentActor.cs" />
     <Compile Include="Actors\Aggregation.cs" />
-    <Compile Include="Actors\Sender.cs" />
+    <Compile Include="Actors\SenderActor.cs" />
     <Compile Include="Actors\TestRun.cs" />
     <Compile Include="Actors\TestStatistic.cs" />
     <Compile Include="Commands\AnalyseTestResult.cs" />
@@ -68,8 +68,10 @@
     <Compile Include="Queries\GetAgentDataForTest.cs" />
     <Compile Include="Queries\GetIndividualStandardInfoForTestAgent.cs" />
     <Compile Include="Queries\GetTestStatistics.cs" />
+    <Compile Include="Utility\ActorSystemProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

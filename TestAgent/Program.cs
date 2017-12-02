@@ -5,7 +5,7 @@ using TestAgent.Actors;
 namespace TestAgent {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Test Agent");
+            Console.WriteLine("Test AgentActor");
             using (var system = ActorSystem.Create("TestAgent"))
             {
                 //TODO remove (only for testing)
