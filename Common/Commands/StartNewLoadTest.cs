@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Common.Commands {
 
-namespace Common.Commands
-{
-    public class StartNewLoadTest
-    {
+    public sealed class StartNewLoadTest {
+
+        public StartNewLoadTest(string url, int numberOfAgents, int numberOfRequestsPerAgent) {
+            NumberOfAgents = numberOfAgents;
+            NumberOfRequestsPerAgent = numberOfRequestsPerAgent;
+        }
+
         public string Url { get; set; }
+        
+        public int NumberOfAgents { get; }
 
+        public int NumberOfRequestsPerAgent { get; }
     }
 }

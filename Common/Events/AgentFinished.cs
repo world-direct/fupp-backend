@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Common.Dtos;
+﻿namespace Common.Events {
+    using System;
+    using System.Collections.Generic;
+    using Dtos;
 
-namespace Common.Events
-{
-    public class AgentFinished
-    {
-        public AgentFinished(IEnumerable<RequestResultDto> requests) {
-            this.Requests = requests;
+    public sealed class AgentFinished {
+        
+        public AgentFinished(Guid testId, Guid agentId, IEnumerable<RequestResultDto> requests) {
+            TestId = testId;
+            AgentId = agentId;
+            Requests = requests;
         }
+
+        public Guid TestId { get; }
+
+        public Guid AgentId { get; }
 
         public IEnumerable<RequestResultDto> Requests { get; }
     }

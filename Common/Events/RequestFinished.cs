@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Common.Events {
+    using System;
+    using System.Net;
 
-namespace Common.Events
-{
-    public sealed class RequestFinished
-    {
-        public RequestFinished(HttpStatusCode resultCode, TimeSpan requestDuration) {
+    public sealed class RequestFinished {
+        
+        public RequestFinished(Guid senderId, HttpStatusCode resultCode, TimeSpan requestDuration) {
+            SenderId = senderId;
             ResultCode = resultCode;
             RequestDuration = requestDuration;
         }
 
-        public HttpStatusCode ResultCode { get;  }
-        public TimeSpan RequestDuration { get; }
+        public Guid SenderId { get; }
 
+        public HttpStatusCode ResultCode { get; }
+
+        public TimeSpan RequestDuration { get; }
     }
 }

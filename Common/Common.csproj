@@ -104,6 +104,7 @@
     <Compile Include="Commands\StartNewLoadTest.cs" />
     <Compile Include="Dtos\RequestResultDto.cs" />
     <Compile Include="Events\AgentFinished.cs" />
+    <Compile Include="Events\HttpResponseReceived.cs" />
     <Compile Include="Events\RequestFinished.cs" />
     <Compile Include="Events\TestResultAnalysed.cs" />
     <Compile Include="Events\TestStarted.cs" />
