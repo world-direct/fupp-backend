@@ -8,6 +8,7 @@ namespace TestCoordinator {
     class Program {
         static void Main(string[] args)
         {
+            Console.WriteLine("I'm a TestCoordinator");
         }
     }
 }

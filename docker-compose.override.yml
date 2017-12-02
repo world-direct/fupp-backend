@@ -4,6 +4,9 @@ services:
   webapi:
     ports:
       - "80"
+  lighthouse:
+    ports:
+      - "4053"
 networks:
   default:
     external:
