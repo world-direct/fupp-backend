@@ -1,4 +1,4 @@
 *
-!bin\Debug\net461
+!bin\Debug\*
 !obj\Docker\publish\*
 !obj\Docker\empty\

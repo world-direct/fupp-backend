@@ -1,4 +1,4 @@
 *
-!bin\Debug
+!bin\*
 !obj\Docker\publish\*
 !obj\Docker\empty\

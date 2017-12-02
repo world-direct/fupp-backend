@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lighthouse", "Lighthouse\Lighthouse.csproj", "{2D20FC73-9215-4CB9-B131-19B28F6CE966}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{D70163D1-C153-4991-8AAD-A1EC5E5F194D}"
+	ProjectSection(SolutionItems) = preProject
+		HowoRun.txt = HowoRun.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
