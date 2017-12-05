@@ -1,7 +1,7 @@
 ﻿namespace TestAgent {
     using System;
-    using Actors;
     using Akka.Actor;
+    using Common.Actors;
     using Common.Commands;
     using Common.Utility;
 
@@ -12,7 +12,8 @@
             using (var system = ActorSystemProvider.ActorSystem) {
                 //TODO remove (only for testing)
                 var testRunCoordinator = system.ActorOf(Props.Create<TestRunCoordinator>(), "testRunCoordinator");
-                testRunCoordinator.Tell(new StartNewLoadTest("https://www.google.at", 5, 2));
+                Console.ReadLine();
+                testRunCoordinator.Tell(new StartNewLoadTest("http://my.paylife.at", 3, 5));
 
                 Console.ReadLine();
                 system.Terminate();

@@ -1,28 +1,18 @@
-﻿using Akka.Actor;
-using Common.Actors;
-using Common.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Common.Actors {
+    using System;
+    using Akka.Actor;
+    using Commands;
 
-namespace TestAgent.Actors
-{
-    public sealed class TestRunCoordinator : ReceiveActor
-    {
+    public sealed class TestRunCoordinator : ReceiveActor {
 
-        public TestRunCoordinator()
-        {
+        public TestRunCoordinator() {
             Console.WriteLine($"TestRunCoordinator created");
             Receive<StartNewLoadTest>(message => StartNewLoadTest(message));
         }
 
-        private void StartNewLoadTest(StartNewLoadTest message)
-        {
-           var testRunActor = Context.ActorOf(Props.Create(() => new TestRunActor(message)));
+        private void StartNewLoadTest(StartNewLoadTest message) {
+            var testRunActor = Context.ActorOf(Props.Create(() => new TestRunActor(message)));
             testRunActor.Forward(message);
         }
-
     }
 }
