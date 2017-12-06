@@ -10,23 +10,23 @@ services:
   lighthouse:
     image: lighthouse.netcore
     build:
-      context: .\Lighthouse.NetCoreApp
+      context: ./Lighthouse.NetCoreApp
       dockerfile: Dockerfile
 
   testagent:
     image: testagent.netcore
     build:
-      context: .\TestAgent
+      context: ./TestAgent
       dockerfile: NetCore.Dockerfile
 
   testcoordinator:
     image: testcoordinator.netcore
     build:
-      context: .\TestCoordinator
+      context: ./TestCoordinator
       dockerfile: NetCore.Dockerfile
 
   testreporter:
     image: testreporter.netcore
     build:
-      context: .\TestReporter
+      context: ./TestReporter
       dockerfile: NetCore.Dockerfile
