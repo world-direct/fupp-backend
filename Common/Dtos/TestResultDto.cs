@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Events
-{
-    public class TestStarted
-    {
-        public TestStarted(string testName, string url) {
-            TestName = testName;
+namespace Common.Dtos {
+    public sealed class TestResultDto {
+        public TestResultDto(string url, string iD) {
             Url = url;
+            ID = iD;
         }
 
-        public string TestName { get; }
         public string Url { get; }
+        public string ID { get; }
     }
 }

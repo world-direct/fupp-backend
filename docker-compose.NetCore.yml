@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-#  webapi:
-#    image: webapi
-#    build:
-#      context: .\WebApi
-#      dockerfile: Dockerfile
+  webapi:
+    image: webapi.netcore
+    build:
+      context: ./WebApi.NetCore
+      dockerfile: Dockerfile
 
   lighthouse:
     image: lighthouse.netcore
