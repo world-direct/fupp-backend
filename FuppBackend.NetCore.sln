@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCoordinator.NetCore", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReporter.NetCore", "TestReporter\TestReporter.NetCore.csproj", "{AE887B59-5ADC-44D6-AB7E-7F2427B86F5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.NetCore", "WebApi.NetCore\WebApi.NetCore.csproj", "{9A4F359D-63D0-49FD-9171-22A6E137695B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{AE887B59-5ADC-44D6-AB7E-7F2427B86F5A}.Release|x64.Build.0 = Release|x64
 		{AE887B59-5ADC-44D6-AB7E-7F2427B86F5A}.Release|x86.ActiveCfg = Release|x86
 		{AE887B59-5ADC-44D6-AB7E-7F2427B86F5A}.Release|x86.Build.0 = Release|x86
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Debug|x64.ActiveCfg = Debug|x64
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Debug|x64.Build.0 = Debug|x64
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Debug|x86.ActiveCfg = Debug|x86
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Debug|x86.Build.0 = Debug|x86
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Release|x64.ActiveCfg = Release|x64
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Release|x64.Build.0 = Release|x64
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Release|x86.ActiveCfg = Release|x86
+		{9A4F359D-63D0-49FD-9171-22A6E137695B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
