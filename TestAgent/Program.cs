@@ -1,5 +1,6 @@
 ﻿namespace TestAgent {
     using System;
+    using System.Threading;
     using Akka.Actor;
     using Common.Actors;
     using Common.Commands;
@@ -20,8 +21,13 @@
                 Console.ReadLine();
                 testRunCoordinator.Tell(new StartNewLoadTest("http://wdat25097.world-direct.at", 3, 5));
                 testRunCoordinator.Tell(new StartNewLoadTest("http://my.paylife.at", 3, 5));
-                Console.ReadLine();
+
+                Thread.Sleep(2000); //doing really important work here ...
                 Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(" press <enter> to continue");
+                Console.ReadLine();
+
+
                 Console.WriteLine("reading test dictionary");
                 //GUi.... simulated
 
@@ -43,7 +49,7 @@
 
                 Console.WriteLine(JsonConvert.SerializeObject(agentResults.Result));
 
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("get further data for specific agent from this test");
                 Console.Write("agent id -> ");
                 string agent = Console.ReadLine();
