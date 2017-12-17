@@ -6,27 +6,39 @@ services:
     build:
       context: .\WebApi
       dockerfile: Dockerfile
+    depends_on:
+      - lighthouse
+    expose:
+     - "5000"
 
   lighthouse:
     image: lighthouse
     build:
       context: .\Lighthouse
       dockerfile: Dockerfile
+    depends_on:
+      - lighthouse
 
   testagent:
     image: testagent
     build:
       context: .\TestAgent
       dockerfile: Dockerfile
+    depends_on:
+      - lighthouse
 
   testcoordinator:
     image: testcoordinator
     build:
       context: .\TestCoordinator
       dockerfile: Dockerfile
+    depends_on:
+      - lighthouse
 
   testreporter:
     image: testreporter
     build:
       context: .\TestReporter
       dockerfile: Dockerfile
+    depends_on:
+      - lighthouse
