@@ -12,21 +12,25 @@ services:
     build:
       context: ./Lighthouse.NetCoreApp
       dockerfile: Dockerfile
+    tty: true
 
   testagent:
     image: testagent.netcore
     build:
       context: ./TestAgent
       dockerfile: NetCore.Dockerfile
+    tty: true
 
   testcoordinator:
     image: testcoordinator.netcore
     build:
       context: ./TestCoordinator
       dockerfile: NetCore.Dockerfile
+    tty: true
 
   testreporter:
     image: testreporter.netcore
     build:
       context: ./TestReporter
       dockerfile: NetCore.Dockerfile
+    tty: true
