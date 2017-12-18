@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - lighthouse
-    expose:
-     - "5000"
+    ports:
+     - "5000:5000"
 
   lighthouse:
     image: lighthouse.netcore
@@ -17,6 +17,8 @@ services:
       context: ./Lighthouse.NetCoreApp
       dockerfile: Dockerfile
     tty: true
+    expose:
+     - "4053"
 
   testagent:
     image: testagent.netcore
@@ -36,11 +38,11 @@ services:
     depends_on:
       - lighthouse
 
-  testreporter:
-    image: testreporter.netcore
-    build:
-      context: ./TestReporter
-      dockerfile: NetCore.Dockerfile
-    tty: true
-    depends_on:
-      - lighthouse
+#  testreporter:
+#    image: testreporter.netcore
+#    build:
+#      context: ./TestReporter
+#      dockerfile: NetCore.Dockerfile
+#    tty: true
+#    depends_on:
+#      - lighthouse
