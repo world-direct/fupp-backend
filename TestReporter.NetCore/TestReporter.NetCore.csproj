@@ -9,4 +9,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="../Common/netcore-akka-base.conf" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

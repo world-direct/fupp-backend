@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.NetCore", "Common\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lighthouse.NetCoreApp", "Lighthouse.NetCoreApp\Lighthouse.NetCoreApp.csproj", "{850AB74B-629B-4BFC-A7A9-AD4587B8843B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAgent.NetCore", "TestAgent\TestAgent.NetCore.csproj", "{DB78EB0E-C038-4ED6-B0CE-804940F40D1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAgent.NetCore", "TestAgent.NetCore\TestAgent.NetCore.csproj", "{DB78EB0E-C038-4ED6-B0CE-804940F40D1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCoordinator.NetCore", "TestCoordinator\TestCoordinator.NetCore.csproj", "{84ADB760-B5F6-44F4-9ABB-8E96EE5AA2C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCoordinator.NetCore", "TestCoordinator.NetCore\TestCoordinator.NetCore.csproj", "{84ADB760-B5F6-44F4-9ABB-8E96EE5AA2C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReporter.NetCore", "TestReporter\TestReporter.NetCore.csproj", "{AE887B59-5ADC-44D6-AB7E-7F2427B86F5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReporter.NetCore", "TestReporter.NetCore\TestReporter.NetCore.csproj", "{AE887B59-5ADC-44D6-AB7E-7F2427B86F5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.NetCore", "WebApi.NetCore\WebApi.NetCore.csproj", "{9A4F359D-63D0-49FD-9171-22A6E137695B}"
 EndProject

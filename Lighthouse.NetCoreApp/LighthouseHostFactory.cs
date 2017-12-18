@@ -11,6 +11,7 @@
 // CONDITIONS OF ANY KIND, either express or implied. See the License for the 
 // specific language governing permissions and limitations under the License.
 
+using System;
 using System.Linq;
 using Akka.Actor;
 using Akka.Configuration;
@@ -63,9 +64,9 @@ akka.remote.dot-netty.tcp.port = {1}", ipAddress, port))
 
         private static Config GetConfig()
         {
-            var configString = @"
+            string configString = @"
                     lighthouse{
-		                    actorsystem: ""webcrawler"" #POPULATE NAME OF YOUR ACTOR SYSTEM HERE
+		                    actorsystem: ""FuppSystem"" #POPULATE NAME OF YOUR ACTOR SYSTEM HERE
 	                    }
 			
                     akka {
@@ -80,19 +81,26 @@ akka.remote.dot-netty.tcp.port = {1}", ipAddress, port))
 			                    applied-adapters = []
 			                    transport-protocol = tcp
 			                    #will be populated with a dynamic host-name at runtime if left uncommented
-			                    #public-hostname = ""POPULATE STATIC IP HERE""
+			                    public-hostname = ""PUBLISH_HOST""
 			                    hostname = ""0.0.0.0""
-			                    port = 4053
+			                    port = PUBLISH_PORT
 		                    }
 	                    }     
 											
 	                    cluster {
 		                    #will inject this node as a self-seed node at run-time
-		                    seed-nodes = [] #manually populate other seed nodes here, i.e. ""akka.tcp://lighthouse@127.0.0.1:4053"", ""akka.tcp://lighthouse@127.0.0.1:4044""
+		                    seed-nodes = [""SEED_NODE_1"", ""SEED_NODE_2""] #manually populate other seed nodes here, i.e. ""akka.tcp://lighthouse@127.0.0.1:4053"", ""akka.tcp://lighthouse@127.0.0.1:4044""
 		                    roles = [lighthouse]
 	                    }
                     }
             ";
+            configString = configString.Replace("PUBLISH_HOST", Environment.GetEnvironmentVariable("PUBLISH_HOST"));
+            configString = configString.Replace("PUBLISH_PORT", Environment.GetEnvironmentVariable("PUBLISH_PORT"));
+            configString = configString.Replace("SEED_NODE_1", Environment.GetEnvironmentVariable("SEED_NODE_1"));
+            configString = configString.Replace("SEED_NODE_2", Environment.GetEnvironmentVariable("SEED_NODE_2"));
+            
+            //Console.WriteLine(configString);
+
             return ConfigurationFactory.ParseString(configString);
         }
     }
