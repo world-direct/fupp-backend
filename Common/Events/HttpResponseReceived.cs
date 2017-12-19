@@ -3,10 +3,10 @@
 
     public sealed class HttpResponseReceived {
 
-        public HttpResponseReceived(HttpStatusCode statusCode) {
+        public HttpResponseReceived(HttpStatusCode? statusCode) {
             StatusCode = statusCode;
         }
 
-        public HttpStatusCode StatusCode { get; }
+        public HttpStatusCode? StatusCode { get; }
     }
 }

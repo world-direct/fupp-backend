@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Actors\AggregationActor.cs" />
     <Compile Include="Actors\SenderActor.cs" />
+    <Compile Include="Actors\TestResultCache.cs" />
     <Compile Include="Actors\TestRunActor.cs" />
     <Compile Include="Actors\TestRunCoordinatorActor.cs" />
     <Compile Include="Actors\TestStatisticActor.cs" />
@@ -102,7 +103,9 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Commands\ProcessAgentResults.cs" />
     <Compile Include="Commands\StartNewLoadTest.cs" />
+    <Compile Include="Dtos\AgentResultDto.cs" />
     <Compile Include="Dtos\RequestResultDto.cs" />
+    <Compile Include="Dtos\TestResultDto.cs" />
     <Compile Include="Events\AgentFinished.cs" />
     <Compile Include="Events\HttpResponseReceived.cs" />
     <Compile Include="Events\RequestFinished.cs" />

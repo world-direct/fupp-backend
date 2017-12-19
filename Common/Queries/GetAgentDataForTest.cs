@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Common.Queries
 {
-    public class GetAgentDataForTest
+    public sealed class GetAgentDataForTest
     {
+        public GetAgentDataForTest(string testId) {
+            TestId = testId;
+        }
+
+        public string TestId { get; }
     }
 }

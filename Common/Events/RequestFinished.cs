@@ -4,15 +4,15 @@
 
     public sealed class RequestFinished {
         
-        public RequestFinished(Guid senderId, HttpStatusCode resultCode, TimeSpan requestDuration) {
+        public RequestFinished(string senderId, HttpStatusCode? resultCode, TimeSpan requestDuration) {
             SenderId = senderId;
             ResultCode = resultCode;
             RequestDuration = requestDuration;
         }
 
-        public Guid SenderId { get; }
+        public string SenderId { get; }
 
-        public HttpStatusCode ResultCode { get; }
+        public HttpStatusCode? ResultCode { get; }
 
         public TimeSpan RequestDuration { get; }
     }

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Common.Queries
 {
-    public class GetIndividualStandardInfoForTestAgent
+    public sealed class GetIndividualStandardInfoForTestAgent
     {
+        public string TestId { get; }
+        public string AgentId { get; }
+
+        public GetIndividualStandardInfoForTestAgent(string testId, string agentIf) {
+            TestId = testId;
+            AgentId = agentIf;
+        }
     }
 }

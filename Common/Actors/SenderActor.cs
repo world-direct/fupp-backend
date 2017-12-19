@@ -1,13 +1,14 @@
 ﻿namespace Common.Actors {
     using System;
     using System.Net;
+    using System.Net.Http;
     using Akka.Actor;
     using Events;
 
     public sealed class SenderActor : ReceiveActor {
 
-        private const int TIMEOUT = 10000;
-        private readonly Guid id;
+        private const int TIMEOUT = 10;
+        private readonly string id;
 
         private readonly IActorRef receiver;
         private readonly string url;
@@ -17,7 +18,7 @@
             Console.WriteLine($"{nameof(SenderActor)} {Self.Path} created.");
             this.receiver = receiver;
             this.url = url;
-            id = Guid.NewGuid();
+            id = Guid.NewGuid().ToString();
 
             Receive<HttpResponseReceived>(m => HandleHttpResponseReceived(m));
             Receive<object>(m => Console.WriteLine("BITTE NICHT"));
@@ -27,14 +28,20 @@
 
         private void MakeRequest() {
             Console.WriteLine("uuuuuund");
-            HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
-            request.Timeout = TIMEOUT;
 
             startTime = DateTime.Now;
-            request.GetResponseAsync().ContinueWith(result => {
+
+
+            HttpClient client = new HttpClient();
+            client.Timeout = new TimeSpan(0,0,0,TIMEOUT);
+            client.SendAsync(new HttpRequestMessage(HttpMethod.Get, url)).ContinueWith(result => {
                 Console.WriteLine("NAAAA");
-                return new HttpResponseReceived(((HttpWebResponse) result.Result).StatusCode);
+                if (result.IsCanceled || result.IsFaulted) {
+                    return new HttpResponseReceived(default(HttpStatusCode?));
+                }
+                return new HttpResponseReceived(result.Result.StatusCode);
             }).PipeTo(Self);
+
             Console.WriteLine("YEAHHHH");
         }
 
