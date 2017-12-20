@@ -16,8 +16,9 @@ public class StartTestRequestActor : ReceiveActor {
     private IActorRef TestrunCoordinatorRouter { get; }
 
     private void HandleStartTestRequest(StartTestRequest x) {
-        TestrunCoordinatorRouter.Tell(new StartNewLoadTest("http://orf.at", 3, 5));
-        
+        //this is pretty much "fire and forget"
+        TestrunCoordinatorRouter.Tell(new StartNewLoadTest(x.Url, x.NumberOfAgents, x.ReQuestsPerAgent));
+        //therefore there is actually nothing to tell back....
         Sender.Tell(new StartTestResponse());
     }
 }
