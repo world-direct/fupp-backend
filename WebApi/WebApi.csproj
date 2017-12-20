@@ -242,7 +242,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actors\Requests\StartTestRequest.cs" />
+    <Compile Include="Actors\Requests\TestsResultRequest.cs" />
     <Compile Include="Actors\Responses\StartTestResponse.cs" />
+    <Compile Include="Actors\Responses\TestsResultResponse.cs" />
+    <Compile Include="Actors\TestResultsRequestActor.cs" />
     <Compile Include="Actors\StartTestRequestActor.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -250,6 +253,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="Controllers\TestResultsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

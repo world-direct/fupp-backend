@@ -26,6 +26,7 @@ namespace WebApi {
             
            var actorSystem = ActorSystemProvider.ActorSystem;
             actorSystem.ActorOf(Props.Create<StartTestRequestActor>(), "StartTestRequest");
+            actorSystem.ActorOf(Props.Create<TestResultsRequestActor>(), "TestResultsRequest");
             
 
         }

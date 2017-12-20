@@ -15,7 +15,7 @@
 
         private ActorSelection TestRunRequestActor { get; }
 
-        // GET api/values
+        // GET api/start
         public async Task<HttpStatusCode> Get(string url, int nAgents, int nRequests) {
 
             try {
