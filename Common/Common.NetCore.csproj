@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Properties/AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="app.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

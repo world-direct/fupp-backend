@@ -10,7 +10,7 @@ services:
       - lighthouse-1
       - lighthouse-2
     ports:
-     - "5000:5000"
+     - 5000:5000
     networks:
       - fupp-cluster
     environment:
@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile
     tty: true
     expose:
-     - "4053"
+     - 4053
     networks:
       - fupp-cluster
     environment:
@@ -37,9 +37,6 @@ services:
 
   lighthouse-2:
     image: lighthouse.netcore
-    build:
-      context: ./Lighthouse.NetCoreApp
-      dockerfile: Dockerfile
     tty: true
     expose:
      - "4053"
