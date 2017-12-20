@@ -20,6 +20,7 @@ namespace WebApi.NetCore
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .Build();
+				.UseUrls("http://[::]:5000")
+				.Build();
     }
 }
