@@ -19,8 +19,8 @@
                 var testResultCache = system.ActorOf(Props.Create<TestResultCache>(), "testResultCache");
                 Console.WriteLine("press <enter> to start tests");
                 Console.ReadLine();
-                testRunCoordinator.Tell(new StartNewLoadTest("http://wdat25097.world-direct.at", 3, 5));
-                testRunCoordinator.Tell(new StartNewLoadTest("http://my.paylife.at", 3, 5));
+                //testRunCoordinator.Tell(new StartNewLoadTest("http://wdat25097.world-direct.at", 3, 5));
+                //testRunCoordinator.Tell(new StartNewLoadTest("http://my.paylife.at", 3, 5));
 
                 Thread.Sleep(2000); //doing really important work here ...
                 Console.ForegroundColor = ConsoleColor.Yellow;

@@ -7,7 +7,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Akka.Actor;
-using WebApi.TestActors;
 
 namespace WebApi {
     using Common.Utility;
@@ -26,13 +25,15 @@ namespace WebApi {
 
             
            var actorSystem = ActorSystemProvider.ActorSystem;
-            actorSystem.ActorOf(Props.Create<MyTestActor>(), "TestActor");
+            actorSystem.ActorOf(Props.Create<StartTestRequestActor>(), "StartTestRequest");
+            
 
         }
 
         protected void Application_End()
         {
             CoordinatedShutdown.Get(ActorSystemProvider.ActorSystem).Run().Wait(TimeSpan.FromSeconds(5));
+
         }
     }
 }

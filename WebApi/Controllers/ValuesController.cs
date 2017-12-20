@@ -3,20 +3,26 @@
     using System.Web.Http;
     using Akka.Actor;
     using Common.Utility;
-    using TestActors.Messages;
 
     public class ValuesController : ApiController {
 
         public ValuesController() {
-            ActorRef = ActorSystemProvider.ActorSystem.ActorSelection("user/TestActor");
+
+            //var testRunCoordinator = system.ActorOf(Props.Create<TestRunCoordinator>(), "testRunCoordinator");
+            //var testResultCache = system.ActorOf(Props.Create<TestResultCache>(), "testResultCache");
+            //ActorRef = ActorSystemProvider.ActorSystem.ActorSelection("user/TestActor");
+            //  TestRunRef = Conten // ActorSystemProvider.ActorSystem.ActorSelection("testRunCoordinator");
+
+            TestRunRequestActor = ActorSystemProvider.ActorSystem.ActorSelection("user/StartTestRequest");
         }
 
-        private ActorSelection ActorRef { get; }
+        private ActorSelection TestRunRequestActor { get; }
 
         // GET api/values
         public async Task<int> Get() {
-            var result = await ActorRef.Ask<ResultCalculated>(new AddCommand(8, 2));
-            return result.Result;
+            var response = await TestRunRequestActor.Ask<StartTestResponse>(new StartTestRequest());
+             
+            return 4;
         }
     }
 }

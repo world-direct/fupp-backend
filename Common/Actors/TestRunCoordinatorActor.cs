@@ -11,6 +11,7 @@
         }
 
         private void StartNewLoadTest(StartNewLoadTest message) {
+            Console.WriteLine("a.lsdkfvnadklsfvnmaxfnvm,dfnvdnfbdfnmbdfnmvdm,fvnmasdfnvm,afnvm,asdfbm,a<dbnm,adfnbm,adfnb,madfnbm,adfbnm,adfbn");
             var testRunActor = Context.ActorOf(Props.Create(() => new TestRunActor(message)));
             testRunActor.Forward(message);
         }
