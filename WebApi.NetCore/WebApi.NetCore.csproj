@@ -18,4 +18,9 @@
     <ProjectReference Include="..\Common\Common.NetCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="../Common/netcore-akka-base.conf" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="akka.conf" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

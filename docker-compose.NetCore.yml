@@ -10,14 +10,11 @@ services:
       - lighthouse-1
       - lighthouse-2
     ports:
-     - "5000:5000"
+     - 5000:5000
     networks:
       - fupp-cluster
     environment:
       ENV: NETCORE
-      ENV_ROLE: webapi
-      SEED_NODE_1: akka.tcp://FuppSystem@lighthouse-1:4053
-      SEED_NODE_2: akka.tcp://FuppSystem@lighthouse-2:4053
       
   lighthouse-1:
     image: lighthouse.netcore
@@ -26,30 +23,23 @@ services:
       dockerfile: Dockerfile
     tty: true
     expose:
-     - "4053"
+     - 4053
     networks:
       - fupp-cluster
     environment:
-      PUBLISH_HOST: lighthouse-1
-      PUBLISH_PORT: 4053
-      SEED_NODE_1: akka.tcp://FuppSystem@lighthouse-1:4053
-      SEED_NODE_2: akka.tcp://FuppSystem@lighthouse-2:4053
+      ENV: NETCORE
+      ENV_PUBLIC_HOSTNAME: lighthouse-1
 
   lighthouse-2:
     image: lighthouse.netcore
-    build:
-      context: ./Lighthouse.NetCoreApp
-      dockerfile: Dockerfile
     tty: true
     expose:
      - "4053"
     networks:
       - fupp-cluster
     environment:
-      PUBLISH_HOST: lighthouse-2
-      PUBLISH_PORT: 4053
-      SEED_NODE_1: akka.tcp://FuppSystem@lighthouse-1:4053
-      SEED_NODE_2: akka.tcp://FuppSystem@lighthouse-2:4053
+      ENV: NETCORE
+      ENV_PUBLIC_HOSTNAME: lighthouse-2
 
   testagent:
     image: testagent.netcore
@@ -64,9 +54,6 @@ services:
       - fupp-cluster
     environment:
       ENV: NETCORE
-      ENV_ROLE: agent
-      SEED_NODE_1: akka.tcp://FuppSystem@lighthouse-1:4053
-      SEED_NODE_2: akka.tcp://FuppSystem@lighthouse-2:4053
 
   testcoordinator:
     image: testcoordinator.netcore
@@ -81,9 +68,6 @@ services:
       - fupp-cluster
     environment:
       ENV: NETCORE
-      ENV_ROLE: coordinator
-      SEED_NODE_1: akka.tcp://FuppSystem@lighthouse-1:4053
-      SEED_NODE_2: akka.tcp://FuppSystem@lighthouse-2:4053
 
   testreporter:
     image: testreporter.netcore
@@ -98,9 +82,6 @@ services:
       - fupp-cluster
     environment:
       ENV: NETCORE
-      ENV_ROLE: reporter
-      SEED_NODE_1: akka.tcp://FuppSystem@lighthouse-1:4053
-      SEED_NODE_2: akka.tcp://FuppSystem@lighthouse-2:4053
 
 networks:
   fupp-cluster:

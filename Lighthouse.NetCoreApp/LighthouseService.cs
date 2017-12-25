@@ -18,22 +18,13 @@ namespace Lighthouse.NetCoreApp
 {
     public class LighthouseService
     {
-        private readonly string _ipAddress;
-        private readonly int? _port;
-
         private ActorSystem _lighthouseSystem;
 
-        public LighthouseService() : this(null, null) { }
-
-        public LighthouseService(string ipAddress, int? port)
-        {
-            _ipAddress = ipAddress;
-            _port = port;
-        }
+        public LighthouseService() { }
 
         public void Start()
         {
-            _lighthouseSystem = LighthouseHostFactory.LaunchLighthouse(_ipAddress, _port);
+            _lighthouseSystem = LighthouseHostFactory.LaunchLighthouse();
         }
 
         public async Task StopAsync()

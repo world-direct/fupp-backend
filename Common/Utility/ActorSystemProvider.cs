@@ -19,15 +19,24 @@
                 return ActorSystem.Create(ACTOR_SYSTEM_NAME);
             }
             else {
-                string hocon = File.ReadAllText("netcore-akka-base.conf");
-                hocon = hocon.Replace("SEED_NODE_1", Environment.GetEnvironmentVariable("SEED_NODE_1"));
-                hocon = hocon.Replace("SEED_NODE_2", Environment.GetEnvironmentVariable("SEED_NODE_2"));
-                hocon = hocon.Replace("ENV_ROLE", Environment.GetEnvironmentVariable("ENV_ROLE"));
-                hocon = hocon.Replace("ENV_PORT", Environment.GetEnvironmentVariable("ENV_PORT"));
-                hocon = hocon.Replace("ENV_HOSTNAME", GetLocalIpAddr());
-                Config config = ConfigurationFactory.ParseString(hocon); 
+                Config config = GetNetConfigWithEnvVars(); 
                 return ActorSystem.Create(ACTOR_SYSTEM_NAME, config);
             }
+        }
+
+        private static Config GetNetConfigWithEnvVars() {
+            Config baseConfig = ConfigurationFactory.ParseString(File.ReadAllText("netcore-akka-base.conf")); 
+            Config akkaConfig = ConfigurationFactory.ParseString(File.ReadAllText("akka.conf")); 
+            string injectedConfig = "";
+            if(!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("ENV_PUBLIC_HOSTNAME"))) {
+                injectedConfig += string.Format("\nakka.remote.dot-netty.tcp.public-hostname = {0}", Environment.GetEnvironmentVariable("ENV_PUBLIC_HOSTNAME"));
+            }
+            injectedConfig += string.Format("\nakka.remote.dot-netty.tcp.hostname = {0}", GetLocalIpAddr());
+            Console.WriteLine(injectedConfig);
+
+            return ConfigurationFactory.ParseString(injectedConfig)
+                                    .WithFallback(akkaConfig)
+                                    .WithFallback(baseConfig);
         }
 
         private static string GetLocalIpAddr() {
