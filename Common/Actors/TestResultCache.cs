@@ -13,7 +13,7 @@ namespace Common.Actors {
     public class TestResultCache : ReceiveActor {
 
         Dictionary<string, List<AgentResultDto>> AgentStatistics { get; set; }
-        new Dictionary<string, List<RequestResultDto>> RequestDetails { get; set; }
+        Dictionary<string, List<RequestResultDto>> RequestDetails { get; set; }
         List<TestResultDto> TestRuns { get; set; }
         public TestResultCache() {
 
