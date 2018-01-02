@@ -12,6 +12,8 @@
             using (var system = ActorSystemProvider.ActorSystem) {
                 //TODO remove (only for testing)
                 var testRunCoordinator = system.ActorOf(Props.Create<TestRunCoordinator>(), "testRunCoordinator");
+                var testResultCache = system.ActorOf(Props.Create<TestResultCache>(), "testResultCache");
+
                 Console.ReadLine();
                 testRunCoordinator.Tell(new StartNewLoadTest("http://my.paylife.at", 3, 5));
 

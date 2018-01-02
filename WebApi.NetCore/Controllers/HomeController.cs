@@ -11,7 +11,7 @@ namespace WebApi.NetCore.Controllers
     {
         public string Index()
         {
-            return "Our Hackathon FUPP Application";
+            return "Our Hackathon FUPP Application\n";
         }
     }
 }
