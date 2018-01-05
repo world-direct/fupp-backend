@@ -7,14 +7,20 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Common.Utility;
+using Akka.Actor;
 
 namespace WebApi.NetCore
 {
     public class Program
     {
         public static void Main(string[] args)
-        {
-            BuildWebHost(args).Run();
+    {
+            using (var actorSystem = ActorSystemProvider.ActorSystem) {
+                actorSystem.ActorOf(Props.Create<StartTestRequestActor>(), "StartTestRequest");
+                actorSystem.ActorOf(Props.Create<TestResultsRequestActor>(), "TestResultsRequest");
+                BuildWebHost(args).Run();
+            }
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
