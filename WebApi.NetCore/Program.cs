@@ -19,6 +19,8 @@ namespace WebApi.NetCore
             using (var actorSystem = ActorSystemProvider.ActorSystem) {
                 actorSystem.ActorOf(Props.Create<StartTestRequestActor>(), "StartTestRequest");
                 actorSystem.ActorOf(Props.Create<TestResultsRequestActor>(), "TestResultsRequest");
+                actorSystem.ActorOf(Props.Create<AgentResultsRequestActor>(), "AgentResultsRequest");
+                actorSystem.ActorOf(Props.Create<RequestResultsRequestActor>(), "RequestResultsRequest");
                 BuildWebHost(args).Run();
             }
         }

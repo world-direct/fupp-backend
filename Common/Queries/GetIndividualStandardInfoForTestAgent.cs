@@ -11,9 +11,9 @@ namespace Common.Queries
         public string TestId { get; }
         public string AgentId { get; }
 
-        public GetIndividualStandardInfoForTestAgent(string testId, string agentIf) {
+        public GetIndividualStandardInfoForTestAgent(string testId, string agentId) {
             TestId = testId;
-            AgentId = agentIf;
+            AgentId = agentId;
         }
     }
 }
